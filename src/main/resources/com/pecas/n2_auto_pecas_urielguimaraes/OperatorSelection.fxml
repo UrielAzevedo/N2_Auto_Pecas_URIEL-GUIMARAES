@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="733.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pecas.n2_auto_pecas_urielguimaraes.OperatorSelectionController">
+   <children>
+      <Button fx:id="painelOperadorVendasBtn" layoutX="328.0" layoutY="200.0" mnemonicParsing="false" onAction="#painelOperadorVendasBtnOnAction" prefHeight="23.0" prefWidth="142.0" text="Operador de Vendas" />
+      <Button fx:id="painelOperadorEstoqueBtn" layoutX="523.0" layoutY="200.0" mnemonicParsing="false" onAction="#painelOperadorEstoqueBtnOnAction" prefHeight="23.0" prefWidth="142.0" text="Operador de Estoque" />
+   </children>
+</AnchorPane>

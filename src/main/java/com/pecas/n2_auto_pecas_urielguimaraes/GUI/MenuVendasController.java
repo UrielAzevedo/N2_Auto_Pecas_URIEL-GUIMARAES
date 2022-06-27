@@ -66,12 +66,23 @@ public class MenuVendasController implements Initializable {
 
             int quantidadeAdicionada = 0;
 
+            System.out.println(CboxProduto.getValue().quantidadeEmEstoque());
+            System.out.println(listUnidades.size());
+
+
             for(int j=0; j<CboxProduto.getValue().quantidadeEmEstoque(); j++){
-                for(int i=0; i< rc.size(); i++){
-                    if(CboxProduto.getValue().getUnidadesProduto().get(j).getId() != listUnidades.get(i).getId() && quantidadeAdicionada < Integer.parseInt(TxtQuantidade.getText())){
+                if(listUnidades.size() > 0){
+                    for(int i=0; i< listUnidades.size(); i++){
+                        if(CboxProduto.getValue().getUnidadesProduto().get(j).getId() != listUnidades.get(i).getId() && quantidadeAdicionada < Integer.parseInt(TxtQuantidade.getText())){
+                            listUnidades.add(CboxProduto.getValue().getUnidadesProduto().get(j));
+                            quantidadeAdicionada++;
+                        }
+                    }
+                }else{
+                    do{
                         listUnidades.add(CboxProduto.getValue().getUnidadesProduto().get(j));
                         quantidadeAdicionada++;
-                    }
+                    }while (quantidadeAdicionada < Integer.parseInt(TxtQuantidade.getText()));
                 }
             }
 

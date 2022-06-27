@@ -9,11 +9,31 @@ public class OperadorEstoque {
     private List<Endereco> enderecos = new ArrayList();
     private List<Numero> numeros = new ArrayList();
 
+    public OperadorEstoque (){
+        this.id = this.hashCode();
+    }
+
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    @Override
+    public String toString() {
+        return "OperadorEstoque{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }

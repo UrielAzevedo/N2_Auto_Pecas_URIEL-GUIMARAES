@@ -32,4 +32,20 @@ public class OperadorVendas {
     private int verificarEstoque(Produto produto){
         return produto.quantidadeEmEstoque();
     }
+
+    @Override
+    public String toString() {
+        return "OperadorVendas{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
+    }
 }

@@ -21,4 +21,20 @@ public class UnidadeProduto {
         this.id = this.hashCode();
         this.produto = produto;
     }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId (int id){
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "UnidadeProduto{" +
+                "id=" + id +
+                ", produto=" + produto +
+                '}';
+    }
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="674.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pecas.n2_auto_pecas_urielguimaraes.GUI.MenuCadastroOperadoresController">
+   <children>
+      <Label layoutX="342.0" layoutY="86.0" prefHeight="35.0" prefWidth="201.0" text="Cadstro Operadores">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <SplitPane dividerPositions="0.36126840317100795" layoutY="185.0" prefHeight="489.0" prefWidth="885.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ToggleButton fx:id="TglBtnOperadorEstoque" layoutX="129.0" layoutY="98.0" mnemonicParsing="false" onAction="#TglBtnOperadorEstoqueOnAction" text="OperadorEstoque" />
+                  <Label layoutX="59.0" layoutY="188.0" prefHeight="25.0" prefWidth="49.0" text="Nome" />
+                  <TextField fx:id="TxtNome" layoutX="108.0" layoutY="188.0" />
+                  <Button fx:id="BtnAdicionar" layoutX="75.0" layoutY="303.0" mnemonicParsing="false" onAction="#BtnAdicionarOnAction" text="Adicionar" />
+                  <Button fx:id="BtnExcluir" layoutX="197.0" layoutY="303.0" mnemonicParsing="false" onAction="#BtnExcluirOnAction" text="Exlcuir" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="617.0">
+               <children>
+                  <SplitPane dividerPositions="0.4919499105545617" layoutX="117.0" layoutY="106.0" prefHeight="487.0" prefWidth="561.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="LstViewOperadorEstoque" layoutX="58.0" layoutY="82.0" prefHeight="485.0" prefWidth="272.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="LstViewOperadorVendas" layoutX="41.0" layoutY="78.0" prefHeight="485.0" prefWidth="281.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

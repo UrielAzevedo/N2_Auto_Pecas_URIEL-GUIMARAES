@@ -34,11 +34,21 @@ public class OperatorSelectionController implements Initializable {
     }
 
     public void painelOperadorEstoqueBtnOnAction(){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OperadorEstoqueMenu.fxml"));
+            Parent rootOne = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Menu Operador Estoque");
+            stage.setScene(new Scene(rootOne));
+            stage.show();
+        } catch (Exception e){
+            System.out.print(e);
+        }
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        
+
     }
 }

@@ -10,6 +10,10 @@ public class Produto {
     private double preco;
     private List<UnidadeProduto> unidadesProduto = new ArrayList();
 
+    public Produto () {
+        this.id = this.hashCode();
+    }
+
     public String getNome() {
         return nome;
     }
@@ -34,6 +38,19 @@ public class Produto {
         unidadesProduto.add(unidadeProduto);
     }
 
+    public void adicionarUnidades (int quantidade, Produto produto) {
+
+        for (int i = 0; i <= quantidade -1; i++) {
+            UnidadeProduto unidadeProduto = new UnidadeProduto(produto);
+            unidadesProduto.add(unidadeProduto);
+
+        }
+    }
+
+    public List<UnidadeProduto> getUnidadesProduto () {
+        return this.unidadesProduto;
+    }
+
     public void removerUnidade(UnidadeProduto unidadeProduto){
         unidadesProduto.remove(unidadeProduto);
     }
@@ -44,5 +61,27 @@ public class Produto {
         }else{
             System.out.println("Sem unidades em estoque");
         }
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setUnidadesProduto (List<UnidadeProduto> unidadesProduto) {
+        this.unidadesProduto = unidadesProduto;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", unidadesProduto=" + quantidadeEmEstoque() +
+                '}';
     }
 }

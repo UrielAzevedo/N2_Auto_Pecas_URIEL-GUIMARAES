@@ -1,6 +1,7 @@
 module com.pecas.n2_auto_pecas_urielguimaraes {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.pecas.n2_auto_pecas_urielguimaraes to javafx.fxml;

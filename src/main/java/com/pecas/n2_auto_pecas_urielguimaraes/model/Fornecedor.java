@@ -9,7 +9,7 @@ public class Fornecedor {
     private String nome;
     private List<Produto> produtosFornecidos = new ArrayList();
 
-    Fornecedor(){
+    public Fornecedor(){
         this.id = this.hashCode();
     }
 
@@ -29,4 +29,15 @@ public class Fornecedor {
         this.produtosFornecidos.remove(produtoRemovido);
     }
 
+    public int getId() {
+        return this.id;
+    }
+
+    public List<Produto> getProduto () {
+        return this.produtosFornecidos;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

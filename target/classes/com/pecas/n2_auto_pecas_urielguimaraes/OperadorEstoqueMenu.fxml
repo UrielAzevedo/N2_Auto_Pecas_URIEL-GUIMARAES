@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="779.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pecas.n2_auto_pecas_urielguimaraes.OperadorEstoqueMenuController">
+   <children>
+      <Button fx:id="BtnProdutos" layoutX="106.0" layoutY="223.0" mnemonicParsing="false" onAction="#BtnProdutosOnAction" prefHeight="25.0" prefWidth="127.0" text="Gerenciar Produtos" />
+      <Button fx:id="BtnFornecedors" layoutX="278.0" layoutY="223.0" mnemonicParsing="false" onAction="#BtnFornecedorsOnAction" text="Gerenciar Fornecedores" />
+      <Button fx:id="BtnOperadores" layoutX="470.0" layoutY="223.0" mnemonicParsing="false" onAction="#BtnOperadoresOnAction" text="Gerenciar Operadores" />
+      <Button fx:id="BtnComprarProdutos" layoutX="657.0" layoutY="223.0" mnemonicParsing="false" onAction="#BtnComprarProdutosOnAction" text="Comprar Produtos" />
+      <Button fx:id="BtnRelatorioVendas" layoutX="820.0" layoutY="223.0" mnemonicParsing="false" onAction="#BtnRelatorioVendasOnAction" text="Relatior Vendas" />
+   </children>
+</AnchorPane>

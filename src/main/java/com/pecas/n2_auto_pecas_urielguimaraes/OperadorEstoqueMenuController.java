@@ -62,7 +62,7 @@ public class OperadorEstoqueMenuController {
 
     public void BtnComprarProdutosOnAction() throws Exception{
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("com/pecas/n2_auto_pecas_urielguimaraes/GerenciarOperadoresMenu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MenuComprarProduto.fxml"));
             Parent rootOne = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Menu Operadores");
@@ -78,7 +78,7 @@ public class OperadorEstoqueMenuController {
 
     public void BtnRelatorioVendasOnAction() throws Exception{
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("GerenciarOperadoresMenu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MenuRelatorioVendas.fxml"));
             Parent rootOne = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Menu Operadores");

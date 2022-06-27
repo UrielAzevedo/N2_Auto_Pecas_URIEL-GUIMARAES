@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="669.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pecas.n2_auto_pecas_urielguimaraes.GUI.MenuRelatorioVendas">
+   <children>
+      <Label layoutX="340.0" layoutY="42.0" prefHeight="28.0" prefWidth="121.0" text="Relatorio Vendas" />
+      <SplitPane dividerPositions="0.4769775678866588" layoutY="116.0" prefHeight="393.0" prefWidth="849.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="387.0" prefWidth="380.0">
+               <children>
+                  <Label layoutX="170.0" layoutY="14.0" text="Compras" />
+                  <ListView fx:id="LstViewReciboCompra" layoutX="10.0" layoutY="44.0" prefHeight="347.0" prefWidth="368.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="378.0">
+               <children>
+                  <Label layoutX="177.0" layoutY="14.0" text="Vendas" />
+                  <ListView fx:id="LstViewReciboVenda" layoutX="29.0" layoutY="44.0" prefHeight="347.0" prefWidth="374.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="263.0" layoutY="529.0" text="Total" />
+      <TextField fx:id="TxtTotal" editable="false" layoutX="320.0" layoutY="525.0" />
+   </children>
+</AnchorPane>

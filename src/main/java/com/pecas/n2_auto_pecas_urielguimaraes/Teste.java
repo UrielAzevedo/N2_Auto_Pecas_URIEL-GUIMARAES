@@ -14,22 +14,29 @@ public class Teste {
 
     public static void main (String args[]){
 
-        DaoProduto daoProduto = new DaoProduto();
-        List<Produto> produtos = new ArrayList<Produto>();
-        try{
-            produtos = daoProduto.listar();
-        }catch (Exception e){
+//        DaoProduto daoProduto = new DaoProduto();
+//        List<Produto> produtos = new ArrayList<Produto>();
+//        try{
+//            produtos = daoProduto.listar();
+//        }catch (Exception e){
+//
+//        }
 
-        }
+//        System.out.println(produtos.get(0).quantidadeEmEstoque());
 
-        System.out.println(produtos.get(0).quantidadeEmEstoque());
-
-//        Produto p1 = new Produto();
+        Produto p1 = new Produto();
 //        DaoOperadorEstoque daoEstoque = new DaoOperadorEstoque();
 //        OperadorEstoque opeUm = new OperadorEstoque();
 //        opeUm.setNome("jorge");
-//        p1.setNome("lanterna Siena");
-//        p1.setPreco(60);
+        p1.setNome("lanterna Siena");
+        p1.setPreco(60);
+        p1.adicionarUnidades(4, p1);
+
+        List<UnidadeProduto> unidadesProd = p1.getNUnidades(3);
+
+        List<UnidadeProduto> listUnidades = new ArrayList<UnidadeProduto>();
+
+        System.out.println(listUnidades.addAll(unidadesProd));
 //
 //        try{
 //            daoEstoque.gravar(opeUm);

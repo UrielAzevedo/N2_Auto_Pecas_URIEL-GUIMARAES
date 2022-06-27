@@ -50,6 +50,28 @@ public class DaoProduto extends PostgresqlDAO implements DAO<Produto> {
         return produtosDao;
     }
 
+    public List<UnidadeProduto> listarVendido(Produto produto) throws Exception {
+
+        List<UnidadeProduto> unidadesVendidas = new ArrayList<UnidadeProduto>();
+
+        for(int i=0; i<produto.quantidadeEmEstoque(); i++){
+            String sql = "select * from unidades_produto_recibo where id_unidade = ?";
+            PreparedStatement ps = getPreparedStatement(sql, false);
+            ps.setInt(1, produto.getUnidadesProduto().get(i).getId());
+            ResultSet rs = ps.executeQuery();
+
+            if(rs != null){
+                UnidadeProduto unidadeProduto = new UnidadeProduto();
+                unidadeProduto.setId(rs.getInt("id"));
+
+                unidadesVendidas.add(unidadeProduto);
+            }
+
+        }
+        return unidadesVendidas;
+
+    }
+
     @Override
     public void gravar(Produto produto) throws Exception {
 
@@ -100,4 +122,18 @@ public class DaoProduto extends PostgresqlDAO implements DAO<Produto> {
         psProduto.executeUpdate();
 
     }
+
+    public void adicionarUnidades (UnidadeProduto unidadeProdutoProduto) throws Exception {
+
+        String sqlUnidadeProduto = "INSERT INTO unidades_produto (id, nome_produto, id_produto) VALUES (?, ?, ?)";
+        PreparedStatement psProduto = getPreparedStatement(sqlUnidadeProduto, true);
+        psProduto.setInt(1, unidadeProdutoProduto.getId());
+        psProduto.setString(2, unidadeProdutoProduto.getProduto().getNome());
+        psProduto.setInt(3, unidadeProdutoProduto.getProduto().getId());
+
+        psProduto.executeUpdate();
+        ResultSet rsUnidades = psProduto.getGeneratedKeys();
+        rsUnidades.next();
+    }
+
 }

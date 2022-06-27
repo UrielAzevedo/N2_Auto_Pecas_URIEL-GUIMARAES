@@ -1,6 +1,6 @@
 package com.pecas.n2_auto_pecas_urielguimaraes.model;
 
-import com.pecas.n2_auto_pecas_urielguimaraes.DAO.RecibosVendasDao;
+import com.pecas.n2_auto_pecas_urielguimaraes.DAO.DaoRecibos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +10,14 @@ public class OperadorVendas {
     private String nome;
     private List<Endereco> enderecos = new ArrayList();
     private List<Numero> numeros = new ArrayList();
-    private RecibosVendasDao recibosVendasDao = new RecibosVendasDao();
+    private DaoRecibos recibosVendasDao = new DaoRecibos();
 
     public OperadorVendas(){
         this.id = this.hashCode();
+    }
+
+    public OperadorVendas (int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -25,8 +29,7 @@ public class OperadorVendas {
     }
 
     private void VenderProduto(List<UnidadeProduto> produtosVendidos){
-        ReciboVenda reciboVenda = new ReciboVenda(produtosVendidos, this);
-        recibosVendasDao.adicionarVenda(reciboVenda);
+
     }
 
     private int verificarEstoque(Produto produto){

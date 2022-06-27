@@ -71,6 +71,18 @@ public class Produto {
         return this.id;
     }
 
+    public List<UnidadeProduto> getNUnidades (int numeroUnidades) {
+        if(numeroUnidades <= quantidadeEmEstoque()){
+
+            List<UnidadeProduto> unidadeProdutos = new ArrayList<UnidadeProduto>();
+            for(int j=0; j<= numeroUnidades - 1; j++){
+
+                unidadeProdutos.add(unidadesProduto.get(j));
+            }
+            return unidadeProdutos;
+        } else return new ArrayList<UnidadeProduto>();
+    }
+
     public void setUnidadesProduto (List<UnidadeProduto> unidadesProduto) {
         this.unidadesProduto = unidadesProduto;
     }
